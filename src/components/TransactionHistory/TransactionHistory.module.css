@@ -1,0 +1,25 @@
+.transactionHistory {
+  margin-top: 40px;
+  width: 400px;
+}
+
+table {
+  width: 50%;
+  border: 1px solid;
+}
+
+th {
+  background-color: aqua;
+}
+
+th,
+tr,
+td {
+  height: 40px;
+  border: 1px solid;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}

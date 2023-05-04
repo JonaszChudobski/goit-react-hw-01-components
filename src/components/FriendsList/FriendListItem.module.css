@@ -1,0 +1,29 @@
+.item {
+  min-width: 200px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0 10px;
+  border: 1px solid grey;
+  border-radius: 4px;
+}
+
+.status {
+  margin-left: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.true {
+  composes: status;
+  background-color: green;
+}
+
+.false {
+  composes: status;
+  background-color: red;
+}
