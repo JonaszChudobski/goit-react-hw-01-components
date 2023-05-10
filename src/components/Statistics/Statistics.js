@@ -2,7 +2,7 @@ import React from "react";
 import css from "./Statistics.module.css";
 import PropTypes from "prop-types";
 
-const color = () => {
+const randomColor = () => {
   return Math.floor(Math.random() * 16777215).toString(16);
 };
 
@@ -15,7 +15,7 @@ export const Statistics = ({ title, stats }) => {
           <li
             key={stat.id}
             className={css.item}
-            style={{ backgroundColor: "#" + color() }}
+            style={{ backgroundColor: "#" + randomColor() }}
           >
             <span className={css.label}>{stat.label}</span>
             <span className={css.percentage}>{stat.percentage}</span>
@@ -28,5 +28,12 @@ export const Statistics = ({ title, stats }) => {
 
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.array,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.string,
+      isRequired,
+    })
+  ),
 };
